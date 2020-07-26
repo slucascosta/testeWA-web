@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "testeWA-web",
-    "seed": "git@bitbucket.org:waproject/waproject-base-web.git"
+    "seed": "git@github.com:slucascosta/testeWA-web.git"
   },
   "scripts": {
     "start": "react-scripts start",

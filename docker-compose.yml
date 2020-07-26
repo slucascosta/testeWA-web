@@ -3,7 +3,7 @@ services:
 
   web:
     container_name: testewa-web
-   build: docker/dev
+    build: docker/dev
     ports:
       - "3000:3000"
       - "35729:35729"
