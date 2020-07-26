@@ -1,11 +1,11 @@
 {
-  "name": "PROJECT-SLUG",
+  "name": "testewa-web",
   "description": "Front Base for React Admin",
   "version": "0.0.1",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "%PROJECT-REPO%",
+    "url": "testeWA-web",
     "seed": "git@bitbucket.org:waproject/waproject-base-web.git"
   },
   "scripts": {

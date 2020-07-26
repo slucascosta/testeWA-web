@@ -1,4 +1,4 @@
-Projeto Base React
+testeWA-web
 ==================
 
 Utilize o VSCode, já está configurado com sugestão de extensões.

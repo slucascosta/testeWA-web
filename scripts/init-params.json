@@ -1,0 +1,11 @@
+{
+  "project": "testeWA-web",
+  "repository": "testeWA-web",
+  "endpointDev": "http://localhost:3001",
+  "endpointProd": "http://prod",
+  "dockerImage": "testewa-web",
+  "dockerCredentials": "",
+  "sentryDsn": "",
+  "confirmed": true,
+  "slug": "testewa-web"
+}
