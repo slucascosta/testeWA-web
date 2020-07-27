@@ -62,7 +62,7 @@ const UserListPage = memo(() => {
       <Toolbar title='Usuários' />
 
       <Card>
-        <FormDialog opened={formOpened} user={current} onComplete={formCallback} onCancel={formCancel} />
+        <FormDialog opened={formOpened} item={current} onComplete={formCallback} onCancel={formCancel} />
 
         <CardLoader show={loading} />
 

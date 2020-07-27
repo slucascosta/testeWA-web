@@ -71,7 +71,7 @@ export class ApiService {
       }),
       switchMap(headers => {
         return axios.request({
-          baseURL: this.apiEndpoint,
+          baseURL: url.startsWith('/app') ? this.apiEndpoint.replace('/admin', '') : this.apiEndpoint,
           url,
           method,
           headers: {

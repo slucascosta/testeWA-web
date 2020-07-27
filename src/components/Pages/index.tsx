@@ -2,7 +2,7 @@ import PermissionRoute from 'components/Shared/PermissionRoute';
 import React, { memo, useCallback } from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-import AdminPage from './Admin';
+import AdminPage from './Admin/index';
 import NewPasswordPage from './Public/NewPassword';
 
 const Pages = memo(() => {

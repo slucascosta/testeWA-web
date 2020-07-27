@@ -10,7 +10,6 @@ import FormLabel from '@material-ui/core/FormLabel';
 import Grid from '@material-ui/core/Grid';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Slide from '@material-ui/core/Slide';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import ErrorMessage from 'components/Shared/ErrorMessage';
 import CheckboxField from 'components/Shared/Fields/Checkbox';
 import TextField from 'components/Shared/Fields/Text';
@@ -24,12 +23,7 @@ import { tap } from 'rxjs/operators';
 import userService from 'services/user';
 import * as yup from 'yup';
 
-interface IProps {
-  opened: boolean;
-  user?: IUser;
-  onComplete: (user: IUser) => void;
-  onCancel: () => void;
-}
+import { IDialogProps, useDialogStyle } from 'components/Shared/FormDialog/helper';
 
 const validationSchema = yup.object().shape({
   firstName: yup.string().required().min(3).max(50),
@@ -38,19 +32,8 @@ const validationSchema = yup.object().shape({
   roles: yup.array().required().min(1)
 });
 
-const useStyle = makeStyles({
-  content: {
-    width: 600,
-    maxWidth: 'calc(95vw - 50px)'
-  },
-  heading: {
-    marginTop: 20,
-    marginBottom: 10
-  }
-});
-
-const FormDialog = memo((props: IProps) => {
-  const classes = useStyle(props);
+const FormDialog = memo((props: IDialogProps<IUser>) => {
+  const classes = useDialogStyle(props);
 
   const formik = useFormikObservable<IUser>({
     initialValues: { roles: [] },
@@ -71,8 +54,8 @@ const FormDialog = memo((props: IProps) => {
   }, []);
 
   const handleEnter = useCallback(() => {
-    formik.setValues(props.user ?? formik.initialValues, false);
-  }, [formik, props.user]);
+    formik.setValues(props.item ?? formik.initialValues, false);
+  }, [formik, props.item]);
 
   const handleExit = useCallback(() => {
     formik.resetForm();

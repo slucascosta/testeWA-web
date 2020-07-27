@@ -10,7 +10,7 @@ import OptionItem from './OptionItem';
 export interface IOption {
   text: string;
   icon?: typeof DotsHorizontalIcon;
-  handler: () => void;
+  handler: (obj?: any) => void;
 }
 
 const DropdownMenu = memo((props: Partial<MenuProps>) => {

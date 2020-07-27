@@ -18,9 +18,7 @@
     "no-restricted-imports": [
       "error",
       "date-fns",
-      "mdi-react",
       "lodash",
-      "@material-ui/core",
       "@material-ui/styles",
       "@material-ui/core/TextField"
     ],

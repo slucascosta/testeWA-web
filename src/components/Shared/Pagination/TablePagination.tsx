@@ -1,5 +1,5 @@
 import TablePaginationCore, { LabelDisplayedRowsArgs, TablePaginationProps } from '@material-ui/core/TablePagination';
-import { ScrollTopContext } from 'components/Pages/Admin';
+import { ScrollTopContext } from 'components/Pages/Admin/index';
 import { IPaginationParams } from 'interfaces/pagination';
 import React, { memo, useCallback, useContext } from 'react';
 
